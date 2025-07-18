@@ -3,11 +3,15 @@ name: Deploy Vue.js App to GitHub Pages
 on:
   push:
     branches:
-      - main # <<< IMPORTANT: Ensure this matches your primary branch (e.g., 'main' or 'master').
+      - main # Or 'master' if that's your primary branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions: # <--- ADD THIS SECTION
+      pages: write # Grants permission to deploy to GitHub Pages
+      id-token: write # Required for some OIDC integrations, good to include
+      contents: write # Crucial for 'peaceiris/actions-gh-pages' to push content
 
     steps:
       - name: Checkout code
@@ -16,17 +20,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # You can change this to '20' or another LTS version if preferred.
+          node-version: '18' # Use a stable Node.js version, e.g., 16, 18, 20
 
       - name: Install dependencies
         run: npm install
 
       - name: Build Vue.js app
-        run: npm run build # This runs the 'build' script defined in your package.json
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # This is the folder created by 'npm run build'
-          publish_branch: gh-pages # This is the branch where the static site will be hosted
+          publish_dir: ./dist
+          publish_branch: gh-pages
