@@ -23,9 +23,8 @@
                 <v-carousel
                   cycle
                   height="400"
-                  show-arrows="fixed"
+                  show-arrows="hover"
                   hide-delimiter-background
-                  delimiter-icon="mdi-circle"
                   class="education-carousel"
                 >
                   <v-carousel-item
@@ -42,7 +41,7 @@
                         class="pa-4 education-card"
                         min-width="300"
                         max-width="80%"
-                        height="300"
+                        height="auto"
                         elevation="2"
                       >
                         <v-card-title class="text-h6 font-weight-bold justify-center">{{ educationItem.school }}</v-card-title>
@@ -117,13 +116,13 @@ export default {
         {
           school: 'Destinata High School',
           datesAtended: '2017 - 2021',
-          schoolDescription: 'High School'
+          schoolDescription: 'My subjects inluded Math, Accounting, Bussiness Studies, CAT, English and Afrikaans'
         },
         {
           school: 'North West University',
           datesAtended: '2022 - 2025',
-          schoolDescription: 'Studying towards my BSc In IT'
-        },
+          schoolDescription: `Studying towards my BSc In IT. Coursework: Introduction to accounting, Business Management, Introduction to Computing & Programming(Python), Structured Programming, Basic mathematical techniques, Descriptive Statistics, Data structures and algorithms(Java), System Analysis and Design, Communication skills, Information Security, Data Analytics, Discrete Mathematics, Advanced Databases, Decision supports systems, Artificial Intelligence, Computer Networks`
+        }
       ],
     };
   },
@@ -234,13 +233,6 @@ body,
   position: relative;
   display: inline-block;
   margin-bottom: 10px;
-}
-
-.section-underline {
-  width: 60px;
-  height: 4px;
-  background-color: #e53935;
-  margin-top: 5px;
 }
 
 .education-carousel {
