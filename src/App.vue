@@ -52,10 +52,6 @@
                     </v-sheet>
                   </v-carousel-item>
                 </v-carousel>
-
-                <div class="text-center mt-8">
-                  <v-btn @click="downloadResume" outlined class="download-button" large>DOWNLOAD MY FULL RESUME</v-btn>
-                </div>
               </v-container>
             </section>
             <div class="additional-content py-12">
