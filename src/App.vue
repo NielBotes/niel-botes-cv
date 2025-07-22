@@ -126,7 +126,7 @@ export default {
         {
           school: 'North West University',
           datesAtended: '2022 - 2025',
-          schoolDescription: 'Studieng towards my BSc In IT'
+          schoolDescription: 'Studying towards my BSc In IT'
         },
       ],
     };
