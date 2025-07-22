@@ -77,7 +77,7 @@
                       <li>Agile methodologies</li>
                     </ul>
                   </v-col>
-                  <v-col cols="12" md="6">
+                  <v-col cols="12" md="6" style="padding-left: 30px;">
                     <ul>
                       <li>JavaScript (Node.js, Vue.js)</li>
                       <li>Google Apps Script</li>
@@ -91,9 +91,17 @@
                 </v-row>
                 <h3 class="text-h4 mb-4 mt-8">Contact Me</h3>
                 <p>Feel free to reach out via email or LinkedIn!</p>
-                <v-btn color="primary" href="mailto:nielbotes2003@icloud.com" class="mr-4">Email Me</v-btn>
-                <v-btn color="primary" dark href="https://www.linkedin.com/in/niel-botes-abb71a22b/" target="_blank" class="mr-4">LinkedIn</v-btn>
-                <v-btn color="primary" dark href="https://github.com/NielBotes" target="_blank">GitHub</v-btn>
+                <v-row>
+                  <v-col>
+                    <v-btn color="primary" href="mailto:nielbotes2003@icloud.com" class="mr-4">Email Me</v-btn>
+                  </v-col>
+                  <v-col>
+                    <v-btn color="primary"  dark href="https://www.linkedin.com/in/niel-botes-abb71a22b/" target="_blank" class="mr-4">LinkedIn</v-btn>
+                  </v-col>
+                  <v-col>
+                    <v-btn color="primary" dark href="https://github.com/NielBotes" target="_blank">GitHub</v-btn>
+                  </v-col>
+                </v-row>
               </v-container>
             </div>
           </v-container>
@@ -211,7 +219,7 @@ body,
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
-  width: 65%;
+  width: 80%;
 }
 
 .education-section, .additional-content {
